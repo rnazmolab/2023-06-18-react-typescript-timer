@@ -2,18 +2,7 @@
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
+.Timer-wrapper {
   background-color: #282c34;
   min-height: 100vh;
   display: flex;
@@ -24,15 +13,41 @@
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.elapsed-time {
+  font-size: 2.5rem;
+  /* 等幅フォントを使用することで、タイマーが更新されるたびに要素の再描画が行われ、
+  表示が振動してしまうことを予防します */
+  font-family: monospace;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.milliseconds {
+  font-size: 1.5rem;
+}
+
+.button {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  /* ボタンの幅を固定します。*/
+  width: 80px;
+}
+
+.button:hover {
+  background-color: #0056b3;
+}
+
+.button:active {
+  background-color: #003c80;
+}
+
+.button:focus {
+  outline: none;
 }
